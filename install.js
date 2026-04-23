@@ -51,21 +51,21 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "app",
-        message: 'hf download BadToBest/EchoMimicV2 --exclude "*.md" --local-dir pretrained_weights'
+        message: 'hf download BadToBest/EchoMimicV2 --exclude "*.md" --local-dir pretrained_weights && dir'
       }
     },
     {
       method: "shell.run",
       params: {
         path: "app",
-        message: 'hf download stabilityai/sd-vae-ft-mse --exclude "*.md" --local-dir pretrained_weights/sd-vae-ft-mse'
+        message: 'hf download stabilityai/sd-vae-ft-mse --exclude "*.md" --local-dir pretrained_weights/sd-vae-ft-mse && dir'
       }
     },
     {
       method: "shell.run",
       params: {
         path: "app",
-        message: 'hf download lambdalabs/sd-image-variations-diffusers --exclude "*.md" --local-dir pretrained_weights/sd-image-variations-diffusers'
+        message: 'hf download lambdalabs/sd-image-variations-diffusers --exclude "*.md" --local-dir pretrained_weights/sd-image-variations-diffusers && dir'
       }
     },
     {

@@ -12,15 +12,13 @@ module.exports = {
       }
     },
     {
-      method: "script.start",
+      method: "shell.run",
       params: {
-        uri: "torch.js",
-        params: {
-          venv: "env",
-          path: "app",
-          xformers: true,
-          triton: true
-        }
+        venv: "env",
+        path: "app",
+        message: [
+          
+        ]
       }
     },
     {
@@ -28,11 +26,25 @@ module.exports = {
       params: {
         venv: "env",
         path: "app",
-        message: [
-          "uv pip install -r requirements.txt",
+        message: ["uv pip install wheel",
+          "uv pip install git+https://github.com/openai/CLIP.git@d50d76daa670286dd6cacf3bcd80b5e4823fc8e1 --no-build-isolation",
+          "uv pip install -r ../requirements.txt",
           "uv pip install --no-deps facenet_pytorch==2.6.0",
           "uv pip install pydantic==2.10.6 hf-xet"
         ]
+      }
+    },
+    {
+      method: "script.start",
+      params: {
+        bluefairy: "off",
+        uri: "torch.js",
+        params: {
+          venv: "env",
+          path: "app",
+          xformers: true,
+          triton: true
+        }
       }
     },
     {

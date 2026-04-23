@@ -72,7 +72,7 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "app",
-        message: 'hf download cocktailpeanut/audio_processor --exclude "*.md" --local-dir pretrained_weights/audio_processor'
+        message: 'hf download cocktailpeanut/audio_processor --exclude "*.md" --local-dir pretrained_weights/audio_processor && dir'
       }
     }
   ]
